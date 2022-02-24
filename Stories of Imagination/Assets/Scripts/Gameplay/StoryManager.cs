@@ -14,13 +14,6 @@ namespace StoriesofImagination
 
         [SerializeField] private EventChannelStoryLine OnStoryReadLine;
 
-
-        //not the biggest fan of this but it works for a jam game. 
-        [SerializeField] private StoryLine[] storyGrandma;
-        [SerializeField] private StoryLine[] storyRock;
-        [SerializeField] private StoryLine[] storyCat;
-        [SerializeField] private StoryLine[] storyTree;
-
         private StorySO currentStory;
         private StoryLine[] currentStoryLines;
         #endregion
