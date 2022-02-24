@@ -2716,7 +2716,7 @@ MonoBehaviour:
   isInteratable: 1
   OnInteractEvent: {fileID: 0}
   OnDeInteractEvent: {fileID: 0}
-  storyToTell: 0
+  storyToTell: {fileID: 11400000, guid: d32758fce3b89bd4fbc1e9e40db6a5dc, type: 2}
   OnStoryStart: {fileID: 11400000, guid: 0e16ee1f75a61b74fb1e74050546f0e8, type: 2}
 --- !u!4 &1747692833 stripped
 Transform:

@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c999d9be8b683b4eafd1caf7effe9b2, type: 3}
+  m_Name: Grandma
+  m_EditorClassIdentifier: 
+  storyLines:
+  - lineReader: 0
+    line: 'Narration: It is a warm afternoon in late May, '
+    timeToRead: 4
+  - lineReader: 0
+    line: "The sun is high in the sky and a cool breeze dances its way through windows
+      and cracks to soothe from the sun\u2019s rays."
+    timeToRead: 4
+  - lineReader: 0
+    line: 'Cicadas release their howls, birds sing their songs.  Somewhere in the
+      yard a dog is barking, a tree is swaying, and the stones themselves feel compelled
+      to stir to greet the day. '
+    timeToRead: 4
+  - lineReader: 0
+    line: 'But instead of running outside and playing, you are in here with your
+      grandmother. '
+    timeToRead: 4
+  - lineReader: 0
+    line: "You don\u2019t quite know what\u2019s wrong, you just know it isn\u2019t
+      right."
+    timeToRead: 4
+  - lineReader: 0
+    line: "She\u2019s thinner than usual, paler than usual, and growing worse with
+      every passing day."
+    timeToRead: 4
+  - lineReader: 0
+    line: "She looks at you with kindness and warmth that makes you feel, for a moment,
+      like she isn\u2019t even sick."
+    timeToRead: 4
+  - lineReader: 1
+    line: "Oh, my little baby!  You\u2019re getting so big!  Did you grow since I
+      last saw you?"
+    timeToRead: 4
+  - lineReader: 0
+    line: She coughs.  A dreadful noise made worse by how it racks her frail body.
+    timeToRead: 4
+  - lineReader: 1
+    line: Do I need anything?  No, no, honey everything is fine.
+    timeToRead: 4
+  - lineReader: 1
+    line: ...
+    timeToRead: 4
+  - lineReader: 1
+    line: You know, there is something you can do.
+    timeToRead: 4
+  - lineReader: 1
+    line: Can you tell me a story?
+    timeToRead: 4
+  - lineReader: 1
+    line: "It doesn\u2019t have to be long or fancy, just a little story about something
+      lovely is all."
+    timeToRead: 4
+  - lineReader: 0
+    line: "You try your hardest but you can\u2019t quite think of anything.  You
+      feel like you might cry."
+    timeToRead: 4
+  - lineReader: 1
+    line: "It\u2019s okay, honey.  Take your time.  Go outside and play.  Whenever
+      you think of something just come on by to grandma\u2019s room."
+    timeToRead: 4

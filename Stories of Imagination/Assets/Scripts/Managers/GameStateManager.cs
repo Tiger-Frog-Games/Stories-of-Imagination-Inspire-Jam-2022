@@ -8,7 +8,6 @@ namespace StoriesofImagination
     public enum GameState
     {
         Gameplay,
-        InNarraration,
         Paused
     }
 

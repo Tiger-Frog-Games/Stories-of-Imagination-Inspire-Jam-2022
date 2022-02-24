@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "EventChannelBase/Story")]
 public class EventChannelSOStory : ScriptableObject
 {
-    public event Action<STORYTYPE> OnEvent;
+    public event Action<StorySO> OnEvent;
 
-    public void RaiseEvent(STORYTYPE i)
+    public void RaiseEvent(StorySO i)
     {
         OnEvent?.Invoke(i);
     }

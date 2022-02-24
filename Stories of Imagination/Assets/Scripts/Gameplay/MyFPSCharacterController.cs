@@ -32,7 +32,7 @@ namespace StoriesofImagination
         #region Methods
         private void GameStateManager_OnGameStateChanged(GameState newGameState)
         {
-            this.enabled = (newGameState == GameState.Gameplay || newGameState == GameState.InNarraration) ;
+            this.enabled = (newGameState == GameState.Gameplay) ;
         }
 
         #endregion

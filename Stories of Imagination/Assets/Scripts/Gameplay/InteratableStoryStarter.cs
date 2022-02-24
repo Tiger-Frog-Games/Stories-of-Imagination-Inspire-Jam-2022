@@ -7,7 +7,7 @@ namespace StoriesofImagination
     public class InteratableStoryStarter : Interactable
     {
         #region Variables
-        [SerializeField] private STORYTYPE storyToTell;
+        [SerializeField] private StorySO storyToTell;
         [SerializeField] private EventChannelSOStory OnStoryStart;
         #endregion
 
@@ -19,7 +19,6 @@ namespace StoriesofImagination
 
         protected override void ActiveInteract()
         {
-            print("meow mix!");
             base.ActiveInteract();
             if (OnStoryStart != null)
             {
@@ -29,7 +28,6 @@ namespace StoriesofImagination
 
         protected override void DeActiveInteract()
         {
-            print("meow mix?");
             base.DeActiveInteract();
         }
 

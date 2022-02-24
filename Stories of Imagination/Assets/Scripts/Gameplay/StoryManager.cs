@@ -10,7 +10,7 @@ namespace StoriesofImagination
     {
         #region Variables
         [SerializeField] private EventChannelSOStory OnStoryStart;
-        [SerializeField] private EventChannelSO OnStoryEnd;
+        [SerializeField] private EventChannelSOStory OnStoryEnd;
 
         [SerializeField] private EventChannelStoryLine OnStoryReadLine;
 
@@ -20,8 +20,10 @@ namespace StoriesofImagination
         [SerializeField] private StoryLine[] storyRock;
         [SerializeField] private StoryLine[] storyCat;
         [SerializeField] private StoryLine[] storyTree;
+
+        private StorySO currentStory;
+        private StoryLine[] currentStoryLines;
         #endregion
-        private StoryLine[] currentStory;
 
         #region Unity Methods
 
@@ -37,19 +39,11 @@ namespace StoriesofImagination
         #endregion
 
         #region Methods
-        private void OnStoryStart_OnEvent(STORYTYPE obj)
+        private void OnStoryStart_OnEvent(StorySO storyIn)
         {
-            switch( obj)
-            {
-                case STORYTYPE.GRANDMA_ONE:
-                    currentStory = storyGrandma;
-                    break;
-                default:
-                    currentStory = null;
-                    break;
-            }
+            currentStoryLines = storyIn.getStoryLines(); 
 
-            if (currentStory != null)
+            if (currentStoryLines != null)
             {
                 startTellingStory();
             }
@@ -69,23 +63,37 @@ namespace StoriesofImagination
         }
 
 
+        private float timeForCurrentLine;
         private IEnumerator storyTeller_Coroutine;
         private IEnumerator storyTeller()
         {
-            for (int i = 0; i < currentStory.Length; i++)
+            for (int i = 0; i < currentStoryLines.Length; i++)
             {
-                if (currentStory.Length <= 1)
+                if (currentStoryLines.Length <= 1)
                 {
-                    OnStoryReadLine.RaiseEvent(currentStory[i].getReader(), currentStory[i].getLine(), i, 1);
+                    OnStoryReadLine.RaiseEvent(currentStoryLines[i].getReader(), currentStoryLines[i].getLine(), i, 1);
                 }
                 else
                 {
-                    OnStoryReadLine.RaiseEvent(currentStory[i].getReader(), currentStory[i].getLine(), i, i / (currentStory.Length - 1));
+                    OnStoryReadLine.RaiseEvent(currentStoryLines[i].getReader(), currentStoryLines[i].getLine(), i, i / (currentStoryLines.Length - 1));
                 }
 
-                yield return new WaitForSeconds( currentStory[i].getTimeToRead() );
+                //if the game is paused delay the next line
+
+                timeForCurrentLine = 0;
+                while (timeForCurrentLine < currentStoryLines[i].getTimeToRead())
+                {
+                    while (GameStateManager.Instance.CurrentGameState == GameState.Paused)
+                    {
+                        yield return new WaitForSeconds(.1f);
+                    }
+
+                    yield return new WaitForSeconds(.1f);
+                    timeForCurrentLine += .1f;
+                }
             }
-            OnStoryEnd.RaiseEvent();
+
+            OnStoryEnd.RaiseEvent(currentStory);
         }
 
 

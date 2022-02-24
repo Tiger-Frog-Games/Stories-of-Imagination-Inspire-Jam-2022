@@ -21,7 +21,7 @@ namespace StoriesofImagination
 
         [SerializeField] private EventChannelSOStory OnNewStory;
         [SerializeField] private EventChannelStoryLine nextLine;
-        [SerializeField] private EventChannelSO OnStoryEnd;
+        [SerializeField] private EventChannelSOStory OnStoryEnd;
 
         #region Unity Methods
         private void OnEnable()
@@ -42,13 +42,13 @@ namespace StoriesofImagination
 
         #region Methods
 
-        private void OnNewStory_OnEvent(STORYTYPE obj)
+        private void OnNewStory_OnEvent(StorySO story)
         {
             subTitlesAnimator.SetTrigger("New Story");
             subTitlesAnimator.ResetTrigger("Next Line");
         }
 
-        private void OnStoryEnd_OnEvent()
+        private void OnStoryEnd_OnEvent(StorySO story)
         {
             lineOne.text = "";
             readerOne.text = "";
