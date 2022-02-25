@@ -34,6 +34,9 @@ namespace StoriesofImagination
         #region Methods
         private void OnStoryStart_OnEvent(StorySO storyIn)
         {
+            //should probally add a check to see if a story is being told
+
+            currentStory = storyIn;
             currentStoryLines = storyIn.getStoryLines(); 
 
             if (currentStoryLines != null)
@@ -60,15 +63,18 @@ namespace StoriesofImagination
         private IEnumerator storyTeller_Coroutine;
         private IEnumerator storyTeller()
         {
+            // Other liseners to OnStory start need a frame to set up
+            yield return new WaitForEndOfFrame();
+
             for (int i = 0; i < currentStoryLines.Length; i++)
             {
                 if (currentStoryLines.Length <= 1)
                 {
-                    OnStoryReadLine.RaiseEvent(currentStoryLines[i].getReader(), currentStoryLines[i].getLine(), i, 1);
+                    OnStoryReadLine.RaiseEvent(currentStoryLines[i], i, 1);
                 }
                 else
                 {
-                    OnStoryReadLine.RaiseEvent(currentStoryLines[i].getReader(), currentStoryLines[i].getLine(), i, i / (currentStoryLines.Length - 1));
+                    OnStoryReadLine.RaiseEvent(currentStoryLines[i], i, (float) i / (currentStoryLines.Length - 1));
                 }
 
                 //if the game is paused delay the next line

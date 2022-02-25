@@ -23,12 +23,16 @@ namespace StoriesofImagination
         [SerializeField] private EventChannelStoryLine nextLine;
         [SerializeField] private EventChannelSOStory OnStoryEnd;
 
+        [SerializeField] private EventChannelStoryLine singleLine;
+
         #region Unity Methods
         private void OnEnable()
         {
             nextLine.OnEvent += NextLine_OnEvent;
             OnStoryEnd.OnEvent += OnStoryEnd_OnEvent;
             OnNewStory.OnEvent += OnNewStory_OnEvent;
+
+            singleLine.OnEvent += SingleLine_OnEvent;
         }
 
         private void OnDisable()
@@ -36,6 +40,8 @@ namespace StoriesofImagination
             nextLine.OnEvent -= NextLine_OnEvent;
             OnStoryEnd.OnEvent -= OnStoryEnd_OnEvent;
             OnNewStory.OnEvent -= OnNewStory_OnEvent;
+
+            singleLine.OnEvent -= SingleLine_OnEvent;
         }
 
         #endregion
@@ -44,6 +50,7 @@ namespace StoriesofImagination
 
         private void OnNewStory_OnEvent(StorySO story)
         {
+            isFirstDialog = true;
             subTitlesAnimator.SetTrigger("New Story");
             subTitlesAnimator.ResetTrigger("Next Line");
         }
@@ -57,24 +64,62 @@ namespace StoriesofImagination
             readerTwo.text = "";
         }
 
-        private void NextLine_OnEvent(LINEREADERS reader, string line, int lineNumber, float percentageComplete)
+        private bool isFirstDialog;
+
+        private void NextLine_OnEvent(StoryLine storyLine, int lineNumber,float percentageComplete)
         {
 
             if (currentLine == 0)
             {
-                lineOne.text = line;
-                readerOne.text = $"{reader} :";
+                lineOne.text = storyLine.getLine();
+                readerOne.text = $"{storyLine.getReader()} :";
                 currentLine = 1;
             }
             else
             {
-                lineTwo.text = line;
-                readerTwo.text = $"{reader} :";
+                lineTwo.text = storyLine.getLine();
+                readerTwo.text = $"{storyLine.getReader()} :";
                 currentLine = 0;
             }
-            subTitlesAnimator.SetTrigger("Next Line");
+
+            if (isFirstDialog == false)
+            {
+                subTitlesAnimator.SetTrigger("Next Line");
+                isFirstDialog = true;
+            }
+            
         }
 
-        #endregion
-    }
+        private void SingleLine_OnEvent(StoryLine storyLine, int lineNumber, float percentComplete)
+        {
+            isFirstDialog = true;
+            subTitlesAnimator.SetTrigger("New Story");
+            subTitlesAnimator.ResetTrigger("Next Line");
+
+            lineOne.text = storyLine.getLine();
+            readerOne.text = $"{storyLine.getReader()} :";
+
+            singleLineHider(storyLine.getTimeToRead());
+        }
+
+        private void singleLineHider(float timeIn)
+        {
+            if (hider_Coroutine != null)
+            {
+                StopCoroutine(hider_Coroutine);
+            }
+            hider_Coroutine = Linehider(timeIn);
+
+
+            StartCoroutine(hider_Coroutine);
+        }
+
+        private IEnumerator hider_Coroutine;
+        private IEnumerator Linehider(float timeIn)
+        {
+            yield return new WaitForSeconds(timeIn);
+            subTitlesAnimator.SetTrigger("Next Line");
+        }
+            #endregion
+        }
 }

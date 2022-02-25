@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 59d76b559e0e326468944d119090e3db
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - storyToLisenTo: {instanceID: 0}
+  - StartLiseningForStory: {fileID: 11400000, guid: 0e16ee1f75a61b74fb1e74050546f0e8, type: 2}
+  - StopLiseningForStory: {fileID: 11400000, guid: e93c2054a27294c44b7b511aacc8bb17, type: 2}
+  - lineLisener: {fileID: 11400000, guid: cadefb89a83e638469162d44f7d71a74, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

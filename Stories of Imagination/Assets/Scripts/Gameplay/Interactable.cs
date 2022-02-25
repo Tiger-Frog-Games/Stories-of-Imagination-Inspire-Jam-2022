@@ -20,10 +20,15 @@ namespace StoriesofImagination
         [SerializeField] private EventChannelSO OnDeInteractEvent;
 
         private bool isActiveInActiveState = false;
-        
+
         #endregion
 
         #region Unity Methods
+
+        private void OnEnable()
+        {
+            
+        }
 
         #endregion
 
@@ -38,6 +43,11 @@ namespace StoriesofImagination
         private float coolDown = .2f;
         public void Interact()
         {
+            if (enabled == false)
+            {
+                return;
+            }
+
             if(isInteratable == false || (canOnlyActivateOnce == true && isActivated == true)  || lastActivated + coolDown > Time.time )
             {
                 return;

@@ -7,11 +7,11 @@ public class EventChannelStoryLine : ScriptableObject
 {
     // story line
     // percent complete of story
-    public event Action<LINEREADERS, string, int, float> OnEvent;
+    public event Action<StoryLine,int,float> OnEvent;
 
-    public void RaiseEvent(LINEREADERS reader, string line, int lineNumber, float percentageComplete)
+    public void RaiseEvent(StoryLine storyLine, int lineNumber, float percentageComplete)
     {
-        OnEvent?.Invoke(reader, line, lineNumber, percentageComplete);
+        OnEvent?.Invoke(storyLine, lineNumber, percentageComplete);
     }
 
     public int GetNumberOfLiseners()

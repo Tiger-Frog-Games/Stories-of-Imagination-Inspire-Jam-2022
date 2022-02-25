@@ -56,17 +56,29 @@ namespace StoriesofImagination
         {
             if ( currentHoveredInteract != null )
             {
+
                 currentHoveredInteract.Interact();
             }
         }
 
         private void OnDetectedInteratable(GameObject detectedObject, Micosmo.SensorToolkit.Sensor sensor)
         {
-            if(detectedObject.TryGetComponent<Interactable>(out Interactable interact))
+            foreach(Interactable interact in detectedObject.GetComponentsInChildren<Interactable>())
             {
-                currentHoveredInteract = interact;
-                OnHover.RaiseEvent(currentHoveredInteract);
+                //find the first interatable that is enabled
+                if (interact.enabled == true)
+                {
+                    currentHoveredInteract = interact;
+                    OnHover.RaiseEvent(currentHoveredInteract);
+                    break;
+                }
             }
+
+            //if(detectedObject.TryGetComponent<Interactable>(out Interactable interact))
+            //{
+            //    currentHoveredInteract = interact;
+            //    OnHover.RaiseEvent(currentHoveredInteract);
+            //}
                 
         }
 
@@ -77,14 +89,17 @@ namespace StoriesofImagination
                 return;
             }
 
-            if (detectedObject != currentHoveredInteract.gameObject )
+            foreach (Interactable interact in detectedObject.GetComponentsInChildren<Interactable>())
             {
-                return;
+                if (interact != currentHoveredInteract)
+                {
+                    OnHoverLost.RaiseEvent(currentHoveredInteract);
+
+                    currentHoveredInteract = null;
+                    return;
+                }
             }
-
-            OnHoverLost.RaiseEvent(currentHoveredInteract);
-
-            currentHoveredInteract = null;
+            
         }
 
         
