@@ -8,11 +8,14 @@ namespace StoriesofImagination
     {
         #region Variables
 
-        private List<AudioSource> allAmbientSounds;
+        //private List<AudioSource> allAmbientSounds;
         [SerializeField] private float fadeInTime = 4;
 
         [SerializeField] private List<AudioSource> insideAmbientSounds;
         [SerializeField] private List<AudioSource> outsideAmbientSounds;
+
+        [SerializeField] private AudioSource outsideOne;
+        [SerializeField] private AudioSource outsideTwo;
 
         #endregion
 
@@ -22,7 +25,6 @@ namespace StoriesofImagination
         {
             GameStateManager.Instance.OnGameStateChanged += GameStateManager_OnGameStateChanged;
 
-            allAmbientSounds = new List<AudioSource>();
             ambientSound_Coroutine = new Dictionary<AudioSource, IEnumerator>();
         }
 
@@ -31,10 +33,32 @@ namespace StoriesofImagination
             GameStateManager.Instance.OnGameStateChanged -= GameStateManager_OnGameStateChanged;
         }
 
-        public void addAmbientSound(AudioSource audioIn)
+        public void addSound(AudioSource audioIn)
         {
-            allAmbientSounds.Add(audioIn);
+            //allAmbientSounds.Add(audioIn);
             StartCoroutine( audioFadeIn(audioIn));
+        }
+
+        public void removeSound(AudioSource audioIn)
+        {
+            //allAmbientSounds.Add(audioIn);
+            StartCoroutine(audioFadeOut(audioIn));
+        }
+
+        public void addOutSideSound(AudioSource audioIn)
+        {
+            outsideAmbientSounds.Add(audioIn);
+            StartCoroutine(audioFadeIn(audioIn));
+        }
+
+        public void removeOutsideSound(AudioSource audioIn)
+        {
+            if (outsideAmbientSounds.Contains(audioIn))
+            {
+                outsideAmbientSounds.Remove(audioIn);
+            }
+             
+            StartCoroutine(audioFadeOut(audioIn));
         }
 
         //private IEnumerator storyTeller_Coroutine;
@@ -145,6 +169,59 @@ namespace StoriesofImagination
                 ambientSound_Coroutine.Add(source, audioFadeOut(source));
                 StartCoroutine(ambientSound_Coroutine[source]);
             }
+        }
+
+        public void playBranchMelodySolo(AudioSource soloMelody)
+        {
+            foreach (AudioSource source in outsideAmbientSounds)
+            {
+                if (ambientSound_Coroutine.TryGetValue(source, out IEnumerator source_coroutine))
+                {
+                    if (source_coroutine != null)
+                    {
+                        StopCoroutine(source_coroutine);
+                    }
+                    ambientSound_Coroutine.Remove(source);
+                }
+                ambientSound_Coroutine.Add(source, audioFadeOut(source));
+                StartCoroutine(ambientSound_Coroutine[source]);
+            }
+            addSound(soloMelody);
+        }
+
+        public void donePlayingSoloBranch(AudioSource soloMelody)
+        {
+            foreach (AudioSource source in outsideAmbientSounds)
+            {
+                if (ambientSound_Coroutine.TryGetValue(source, out IEnumerator source_coroutine))
+                {
+                    if (source_coroutine != null)
+                    {
+                        StopCoroutine(source_coroutine);
+                    }
+                    ambientSound_Coroutine.Remove(source);
+                }
+
+                ambientSound_Coroutine.Add(source, audioFadeIn(source));
+                StartCoroutine(ambientSound_Coroutine[source]);
+            }
+            removeSound(soloMelody);
+        }
+
+
+        private bool didLisenToOutsideStory = false;
+        public void OnLisenFirstOutsideStory()
+        {
+            if (didLisenToOutsideStory == true)
+            {
+                return;
+            }
+
+            removeOutsideSound(outsideOne);
+
+            addOutSideSound(outsideTwo);
+            
+            didLisenToOutsideStory = true;
         }
 
         #endregion
