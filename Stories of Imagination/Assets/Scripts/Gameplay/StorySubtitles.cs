@@ -55,6 +55,7 @@ namespace StoriesofImagination
                 StopCoroutine(hider_Coroutine);
             }
 
+            currentLine = 0;
             isFirstDialog = true;
             subTitlesAnimator.SetTrigger("New Story");
             subTitlesAnimator.ResetTrigger("Next Line");
