@@ -32,7 +32,7 @@ namespace StoriesofImagination
 
         private void OnPartOfStoryToRespondTo_OnEvent(StorySO obj)
         {
-            print(obj);
+            
             if (storyToLisenTo == obj)
             {
                 eventOnLisen.Invoke();

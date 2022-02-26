@@ -39,6 +39,11 @@ namespace StoriesofImagination
             }
         }
 
+        public void changeLine(string newLineIn)
+        {
+            lineToTell.changeLine(newLineIn);
+        }
+
         #endregion
     }
 }

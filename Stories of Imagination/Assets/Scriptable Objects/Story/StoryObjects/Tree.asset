@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c999d9be8b683b4eafd1caf7effe9b2, type: 3}
+  m_Name: Tree
+  m_EditorClassIdentifier: 
+  storyLines:
+  - lineReader: 0
+    line: A gentle breeze flows through the leaves of an aging tree with a sad but
+      gentle face on its trunk.
+    timeToRead: 4
+  - lineReader: 0
+    line: When you approach, the tree lowers its leafy gaze toward you and offers
+      a smile.
+    timeToRead: 4
+  - lineReader: 4
+    line: Hello there small one.
+    timeToRead: 4
+  - lineReader: 4
+    line: What brings you beneath my branches today?
+    timeToRead: 4
+  - lineReader: 4
+    line: "\u2026"
+    timeToRead: 4
+  - lineReader: 4
+    line: A story?
+    timeToRead: 4
+  - lineReader: 4
+    line: "Why, I think I\u2019ve plenty of those.  Just give me a moment to think. "
+    timeToRead: 4
+  - lineReader: 4
+    line: "\u2026 \u2026"
+    timeToRead: 4
+  - lineReader: 4
+    line: "\u2026 \u2026 \u2026"
+    timeToRead: 4
+  - lineReader: 4
+    line: "Ah, I\u2019ve remembered one."
+    timeToRead: 4
+  - lineReader: 4
+    line: It was perhaps thirty years ago.  A story told to me by a sibling of a
+      sapling who had yet to earn its branches and grew in overlooking an apartment
+      in the city.
+    timeToRead: 4
+  - lineReader: 4
+    line: It is a rather sad tale, but it has within it some truth and happiness
+      as well.
+    timeToRead: 4
+  - lineReader: 4
+    line: Not far from here there was a man and a woman who lived in the same place,
+      worked in the same place, ate in the same place, but never saw one another.
+    timeToRead: 4
+  - lineReader: 4
+    line: Now this man was by no means rich, but he certainly had no fear of poverty. 
+      Contrary, the woman was wracked with debt and struggled frequently.
+    timeToRead: 4
+  - lineReader: 4
+    line: 'The man had a loving family, many people around him who knew and loved
+      him.  The woman had time only between her struggles to focus on her mother. '
+    timeToRead: 4
+  - lineReader: 4
+    line: "Every morning they would wake up, say their farewells to their families,
+      and board the same train merely two feet apart without once looking in one
+      another\u2019s direction."
+    timeToRead: 4
+  - lineReader: 4
+    line: 'One night, the woman found herself working far too late. '
+    timeToRead: 4
+  - lineReader: 4
+    line: 'The final train was preparing to depart as she rushed her way into the
+      station. '
+    timeToRead: 4
+  - lineReader: 4
+    line: Alas, before she could catch it, she tripped and fell, and the train rolled
+      away, leaving her lost away from home.
+    timeToRead: 4
+  - lineReader: 4
+    line: She sat in an empty train station prepared to cry in solitude.
+    timeToRead: 4
+  - lineReader: 4
+    line: Alas, before she could catch it, she tripped and fell, and the train rolled
+      away, leaving her lost away from home.
+    timeToRead: 4
+  - lineReader: 4
+    line: But then the man appeared, revealing he, too, had worked far later than
+      he should have.
+    timeToRead: 4
+  - lineReader: 4
+    line: 'Where she had worried about the fare home, he had no such troubles, and
+      he paid for the two to have a quiet ride home. '
+    timeToRead: 4
+  - lineReader: 4
+    line: 'It was no grand change or revelation.  The woman thanked the man and then
+      they lived their lives then not differently than they had before. '
+    timeToRead: 4
+  - lineReader: 4
+    line: "They traveled to work the same way, saying farewell to their families
+      and boarding the same train without once looking in one another\u2019s direction."
+    timeToRead: 4
+  - lineReader: 4
+    line: One day, as the two prepared to continue on to their work, the man stumbled
+      and fell onto the tracks.
+    timeToRead: 4
+  - lineReader: 4
+    line: The train was coming quickly and he tried to escape but found he was stuck.
+    timeToRead: 4
+  - lineReader: 4
+    line: He sat on the tracks prepared to die in solitude.
+    timeToRead: 4
+  - lineReader: 4
+    line: Moments before it hit, the woman hoisted him up and pulled him from danger.
+    timeToRead: 4
+  - lineReader: 4
+    line: 'It was no grand change or revelation.  The man thanked the woman and then
+      they lived their lives then not differently than they had before. '
+    timeToRead: 4
+  - lineReader: 4
+    line: 'Many years later, the man passed away of a sudden sickness, and the woman
+      attended his funeral.  She was amazed by how many people came.  People would
+      go around introducing themselves and she would hear names she had never heard
+      before. '
+    timeToRead: 4
+  - lineReader: 4
+    line: Workers, businesspeople, school friends.  There seemed to be no end to
+      the people who owed the man a kindness in some way.
+    timeToRead: 4
+  - lineReader: 4
+    line: She was surprised by how many of them seemed to know her name, but thought
+      little of it.
+    timeToRead: 4
+  - lineReader: 4
+    line: "Not long after, the woman\u2019s mother also passed away."
+    timeToRead: 4
+  - lineReader: 4
+    line: She was filled with a great sadness and loneliness then.  She looked around
+      at her life and worried she had done little with it-though she knew her circumstances
+      were beyond her control.
+    timeToRead: 4
+  - lineReader: 4
+    line: "She arranged the funeral and went alone to tend her grandmother\u2019s
+      memory."
+    timeToRead: 4
+  - lineReader: 4
+    line: She sat in an empty funeral hall prepared to cry in solitude.
+    timeToRead: 4
+  - lineReader: 4
+    line: Then one by one, they began to file in.
+    timeToRead: 4
+  - lineReader: 4
+    line: 'Workers, businesspeople, school friends. '
+    timeToRead: 4
+  - lineReader: 4
+    line: All of the people who had owed the man a kindness had come to repay it.
+    timeToRead: 4
+  - lineReader: 4
+    line: In the years that followed before the woman, too, passed away, she lived
+      surrounded by people who knew her name and knew the small kindnesses she offered
+      to others.
+    timeToRead: 4
+  - lineReader: 4
+    line: "\u2026"
+    timeToRead: 4
+  - lineReader: 4
+    line: As I had said, small one, it is a sad tale.
+    timeToRead: 4
+  - lineReader: 4
+    line: 'I can offer you no illusions that things will last forever, just that
+      in that time we may help one another. '
+    timeToRead: 4
+  - lineReader: 4
+    line: Just as my branches may offer shade, and my fruit may offer food, you may
+      offer your stories and your gift of imagination to others.
+    timeToRead: 4

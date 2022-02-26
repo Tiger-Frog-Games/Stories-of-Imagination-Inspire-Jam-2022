@@ -29,6 +29,9 @@ namespace StoriesofImagination
                 openMenuButton.performed += OnOpenMenuButtonPress;
             }
             openMenuButton?.Enable();
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         private void OnDestroy()
@@ -75,6 +78,9 @@ namespace StoriesofImagination
         {
             GameStateManager.Instance.SetState(GameState.Paused);
 
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
             PauseMenu.SetActive(true);
             ScreenGrayer.SetActive(true);
         }
@@ -83,6 +89,9 @@ namespace StoriesofImagination
             SettingsPanel.SetActive(false);
             ScreenGrayer.SetActive(false);
             PauseMenu.SetActive(false);
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
             GameStateManager.Instance.SetState(GameState.Gameplay);
         }

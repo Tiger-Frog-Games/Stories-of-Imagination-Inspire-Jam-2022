@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c999d9be8b683b4eafd1caf7effe9b2, type: 3}
+  m_Name: Rock
+  m_EditorClassIdentifier: 
+  storyLines:
+  - lineReader: 0
+    line: "There doesn\u2019t seem to be anything around.  The birds and cicadas
+      continue their daily chorus in the middle of the empty yard.  But for some
+      reason you can\u2019t shake the feeling that someone is watching you."
+    timeToRead: 4
+  - lineReader: 5
+    line: Yo.
+    timeToRead: 4
+  - lineReader: 5
+    line: "What\u2019s with the face?  You never seen a rock before?"
+    timeToRead: 4
+  - lineReader: 5
+    line: "\u2026"
+    timeToRead: 4
+  - lineReader: 5
+    line: "A story?  Yea, I\u2019ve got tons of those."
+    timeToRead: 4
+  - lineReader: 5
+    line: "So listen up, I\u2019ve been around here a long time."
+    timeToRead: 4
+  - lineReader: 5
+    line: After a while it kinda gets hard to keep track the way you folks do but
+      I think this story takes place like a billion or so years ago.
+    timeToRead: 4
+  - lineReader: 5
+    line: So once upon a time, there was a raindrop and a grain of sand.
+    timeToRead: 4
+  - lineReader: 5
+    line: 'The grain fell off a massive boulder the same time as the raindrop plopped
+      down next to it and, being new to the world, they made a deal. '
+    timeToRead: 4
+  - lineReader: 5
+    line: Instead of the sand soaking up the drop, or the drop dissolving the sand,
+      they agreed to protect each other.
+    timeToRead: 4
+  - lineReader: 5
+    line: "\u201COne day,\u201D the grain of sand said, \u201Cyou\u2019ll be a grand
+      ocean.  And one day I\u2019ll be a grand mountain.  As long as we look out
+      for each other.\u201D"
+    timeToRead: 4
+  - lineReader: 5
+    line: "Time starts goin\u2019 by, and the two of them have each other's backs
+      the whole time.  The sand turns into a stone and starts to soak up water to
+      give to the droplet.  The droplet turns into a puddle and gathers sand at the
+      bottom to give to the stone. "
+    timeToRead: 4
+  - lineReader: 5
+    line: 'Before your very eyes the stone becomes a rock, becomes a boulder, becomes
+      a hill, becomes a crag.  The puddle becomes a pond, becomes a river, becomes
+      a lake. '
+    timeToRead: 4
+  - lineReader: 5
+    line: 'The next thing they know, that grain of sand and drop of rain are suddenly
+      a massive mountain and a huge sea, still standing next to each other. '
+    timeToRead: 4
+  - lineReader: 5
+    line: They were happy for a while.  I mean, real happy.
+    timeToRead: 4
+  - lineReader: 5
+    line: 'Then things go like they always do. '
+    timeToRead: 4
+  - lineReader: 5
+    line: The sea kept getting bigger, but the rain, the snow, the wind, they start
+      to wear away at the mountain.
+    timeToRead: 4
+  - lineReader: 5
+    line: ' Like somebody pressed the rewind button, the mountain was a crag, then
+      a hill, then a boulder, then a rock. '
+    timeToRead: 4
+  - lineReader: 5
+    line: The sea just kept getting bigger until it was an ocean.
+    timeToRead: 4
+  - lineReader: 5
+    line: 'It got to the point where it was hard for the rock to see the ocean anymore. 
+      The rock was too small and the ocean was too big. '
+    timeToRead: 4
+  - lineReader: 5
+    line: "It was scared and started to feel all lonesome.  It looked around for
+      any other new friends but all of the things around it were so young they didn\u2019t
+      really get what it was like. "
+    timeToRead: 4
+  - lineReader: 5
+    line: "One day it got to be clear the rock and the ocean wouldn\u2019t be able
+      to see each other anymore.  The rock wasn\u2019t gonna say anything about it. "
+    timeToRead: 4
+  - lineReader: 5
+    line: After all, what could a little rock have to say to a big ocean.
+    timeToRead: 4
+  - lineReader: 5
+    line: 'Just as it thought it was all over, the rock heard the ocean calling out
+      to it. '
+    timeToRead: 4
+  - lineReader: 5
+    line: "The ocean said, \u201Cplease don\u2019t worry my friend.  One day I will
+      be a tiny puddle.  And one day you will be a grand mountain.  As long as we
+      look out for each other.\u201D "
+    timeToRead: 4
+  - lineReader: 5
+    line: "\u2026"
+    timeToRead: 4
+  - lineReader: 5
+    line: "What do you mean that\u2019s it?"
+    timeToRead: 4
+  - lineReader: 5
+    line: "What\u2019d you expect, kid?  Not every story has a perfect ending.  Some
+      stories are about the implication. "
+    timeToRead: 4
+  - lineReader: 5
+    line: "Anyway, that\u2019s my story and I\u2019m stickin\u2019 to it. "
+    timeToRead: 4
+  - lineReader: 5
+    line: " Sometimes stories keep going even after they\u2019re done, you know? "
+    timeToRead: 4
+  - lineReader: 5
+    line: "Hey, thanks for listening.  Gets lonely sometimes and it\u2019s good to
+      have somebody to talk to. "
+    timeToRead: 4

@@ -50,6 +50,11 @@ namespace StoriesofImagination
 
         private void OnNewStory_OnEvent(StorySO story)
         {
+            if (hider_Coroutine != null)
+            {
+                StopCoroutine(hider_Coroutine);
+            }
+
             isFirstDialog = true;
             subTitlesAnimator.SetTrigger("New Story");
             subTitlesAnimator.ResetTrigger("Next Line");
@@ -85,7 +90,10 @@ namespace StoriesofImagination
             if (isFirstDialog == false)
             {
                 subTitlesAnimator.SetTrigger("Next Line");
-                isFirstDialog = true;
+            }
+            else
+            {
+                isFirstDialog = false;
             }
             
         }

@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c999d9be8b683b4eafd1caf7effe9b2, type: 3}
+  m_Name: Dog
+  m_EditorClassIdentifier: 
+  storyLines:
+  - lineReader: 0
+    line: "In the middle of the yard you spot your neighbor\u2019s dog.  It is big
+      and fluffy, with rich brown fur, and its tongue always hangs from one side
+      of its mouth excitedly. Dog: Hello friend!  Do you want to play!?"
+    timeToRead: 4
+  - lineReader: 3
+    line: Hello friend!  Do you want to play!?
+    timeToRead: 4
+  - lineReader: 3
+    line: "\u2026"
+    timeToRead: 4
+  - lineReader: 3
+    line: Story!?  Oh boy I love stories!!  Can I tell one can I tell one!?
+    timeToRead: 4
+  - lineReader: 3
+    line: "It happened just the other day!  It is a sad story\u2014but it is also
+      very happy!"
+    timeToRead: 4
+  - lineReader: 3
+    line: I was playing in the leaves over by the road, and then I saw a fox!
+    timeToRead: 4
+  - lineReader: 3
+    line: So I chased the fox and we ran in circles until the fox ran into a hole
+      in a tree!
+    timeToRead: 4
+  - lineReader: 3
+    line: I was sad because I did not have a friend to play with anymore, but then
+      I saw that there was also a crow in the tree!
+    timeToRead: 4
+  - lineReader: 3
+    line: I started to yell asking if the crow wanted to play, but the crow also
+      did not want to play and threw acorns at me!
+    timeToRead: 4
+  - lineReader: 3
+    line: But that was okay because I was getting tired so I went away and I went
+      to sleep.
+    timeToRead: 4
+  - lineReader: 3
+    line: Then I did not see the fox or the crow for a while.
+    timeToRead: 4
+  - lineReader: 3
+    line: But that was okay because I was getting tired so I went away and I went
+      to sleep.
+    timeToRead: 4
+  - lineReader: 3
+    line: But then I saw them again!
+    timeToRead: 4
+  - lineReader: 3
+    line: 'When I went back to pee on the tree I saw that the crow was throwing the
+      acorns and breaking them and then the fox was taking the acorns! '
+    timeToRead: 4
+  - lineReader: 3
+    line: I thought that was very clever even though I do not like to eat acorns.
+    timeToRead: 4
+  - lineReader: 3
+    line: I chased the fox and it ran away and then I yelled to the crow and it threw
+      acorns!
+    timeToRead: 4
+  - lineReader: 3
+    line: Then I did not see the fox or the crow for a while.
+    timeToRead: 4
+  - lineReader: 3
+    line: Then one time I ran up to the fox but the fox did not run away.
+    timeToRead: 4
+  - lineReader: 3
+    line: I ran in circles and I yelled and I jumped but the fox did not want to
+      play that day.
+    timeToRead: 4
+  - lineReader: 3
+    line: Still we went to the tree and the crow threw down acorns but the fox could
+      not carry them so I picked the acorns up and I helped the fox carry them to
+      the hole.
+    timeToRead: 4
+  - lineReader: 3
+    line: After that the fox went into the hole without playing.
+    timeToRead: 4
+  - lineReader: 3
+    line: Then I did not see the fox or the crow for a while.
+    timeToRead: 4
+  - lineReader: 3
+    line: The next time I went to the tree the fox was not there and I was sad. 
+      The crow had not seen the fox either and it was also sad.
+    timeToRead: 4
+  - lineReader: 3
+    line: But all of the sudden something sprang out of the hole.
+    timeToRead: 4
+  - lineReader: 3
+    line: Little foxes!
+    timeToRead: 4
+  - lineReader: 3
+    line: I chased the little foxes in circles and then I yelled to the crow and
+      it threw acorns down!
+    timeToRead: 4
+  - lineReader: 3
+    line: 'And that is my story about how I do not see my old friend any more and
+      that makes me sad, but I do see my new friends and they make me happy! '
+    timeToRead: 4
+  - lineReader: 3
+    line: 'I hope you like my story and maybe you can play with me sometime too! '
+    timeToRead: 4

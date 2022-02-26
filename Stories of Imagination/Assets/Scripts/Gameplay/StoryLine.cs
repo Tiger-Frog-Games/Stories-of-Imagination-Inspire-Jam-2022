@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace StoriesofImagination
 {
-    public enum LINEREADERS {Narrirator, Grandma, Cat }
+    public enum LINEREADERS {Narrirator, Grandma, Cat, Dog, Tree, Rock }
 
     [System.Serializable]
     public class StoryLine
@@ -16,6 +16,11 @@ namespace StoriesofImagination
         public LINEREADERS getReader()
         {
             return lineReader;
+        }
+
+        public void changeLine(string newLineIn)
+        {
+            line = newLineIn;
         }
 
         public string getLine()

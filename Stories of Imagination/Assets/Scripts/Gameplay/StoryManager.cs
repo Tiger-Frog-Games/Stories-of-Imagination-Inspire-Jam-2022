@@ -4,8 +4,7 @@ using UnityEngine;
 
 namespace StoriesofImagination
 {
-    public enum STORYTYPE { GRANDMA_ONE, CAT, DOG, TREE, ROCK }
-
+    
     public class StoryManager : MonoBehaviour
     {
         #region Variables

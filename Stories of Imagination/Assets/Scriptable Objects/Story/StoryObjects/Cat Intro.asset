@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c999d9be8b683b4eafd1caf7effe9b2, type: 3}
+  m_Name: Cat Intro
+  m_EditorClassIdentifier: 
+  storyLines:
+  - lineReader: 0
+    line: "Standing in the hallway outside grandma\u2019s room is a cat you\u2019ve
+      never seen before.  Its hair is a spotted dark grey and it wears a clever smile
+      across its face."
+    timeToRead: 4
+  - lineReader: 2
+    line: Hey, kid.
+    timeToRead: 4
+  - lineReader: 2
+    line: Yeah, you, kid.
+    timeToRead: 4
+  - lineReader: 2
+    line: What do you mean your grandma told you not to talk to magical talking cats?
+    timeToRead: 4
+  - lineReader: 2
+    line: Just listen.  Your grandma told you to tell her a story, right?  Well I
+      happen to know that some of the folks around this house have got some stories
+      to tell.
+    timeToRead: 4
+  - lineReader: 2
+    line: "No, that\u2019s not stealing.  That\u2019s not how stories work.  Stories
+      only work when you share the.  It\u2019s not that deep, kid."
+    timeToRead: 4
+  - lineReader: 2
+    line: "That goofy mutt in the front yard\u2019s got a story about an acorn or
+      something."
+    timeToRead: 4
+  - lineReader: 2
+    line: The old tree keeps rambling about some office workers from like a hundred
+      years ago or whatever.
+    timeToRead: 4
+  - lineReader: 2
+    line: "And there\u2019s something in the back yard that keeps mumbling about
+      something totally wild it saw a thousand years ago or whatever."
+    timeToRead: 4
+  - lineReader: 2
+    line: "I know, I know, it\u2019s hard to trust a magical talking cat you just
+      met, but lemme be honest with you here."
+    timeToRead: 4
+  - lineReader: 2
+    line: The best kinds of stories come from just listening to what other people
+      have to say.
+    timeToRead: 4
+  - lineReader: 2
+    line: Give it a chance and then come back to me once you hear em out.
+    timeToRead: 4
