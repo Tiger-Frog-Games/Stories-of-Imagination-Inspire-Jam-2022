@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace StoriesofImagination
 {
@@ -8,10 +9,14 @@ namespace StoriesofImagination
     public class StoryManager : MonoBehaviour
     {
         #region Variables
+        [SerializeField] private InputActionAsset actions;
+        private InputAction interactInputAction;
+
         [SerializeField] private EventChannelSOStory OnStoryStart;
         [SerializeField] private EventChannelSOStory OnStoryEnd;
 
         [SerializeField] private EventChannelStoryLine OnStoryReadLine;
+
 
         private StorySO currentStory;
         private StoryLine[] currentStoryLines;
@@ -19,9 +24,16 @@ namespace StoriesofImagination
 
         #region Unity Methods
 
+        private void Awake()
+        {
+            interactInputAction = actions.FindAction("InteractWithObject");
+            currentLineCD = float.MinValue;
+        }
+
         private void OnEnable()
         {
             OnStoryStart.OnEvent += OnStoryStart_OnEvent;
+            interactInputAction?.Enable();
         }
 
         private void OnDisable()
@@ -53,13 +65,14 @@ namespace StoriesofImagination
             }
             storyTeller_Coroutine = storyTeller();
 
-            
+            currentLineCD = Time.time + 2;
             StartCoroutine(storyTeller_Coroutine);
         }
 
 
         private float timeForCurrentLine;
         private IEnumerator storyTeller_Coroutine;
+        private float currentLineCD;
         private IEnumerator storyTeller()
         {
             // Other liseners to OnStory start need a frame to set up
@@ -81,13 +94,27 @@ namespace StoriesofImagination
                 timeForCurrentLine = 0;
                 while (timeForCurrentLine < currentStoryLines[i].getTimeToRead())
                 {
-                    while (GameStateManager.Instance.CurrentGameState == GameState.Paused)
+                    while (GameStateManager.Instance.CurrentGameState == GameState.Paused )
                     {
                         yield return new WaitForSeconds(.1f);
                     }
 
                     yield return new WaitForSeconds(.1f);
-                    timeForCurrentLine += .1f;
+
+                    if ((GameStateManager.Instance.isSubtitlesClickForNext == true))
+                    {
+                        while ( ! (interactInputAction.IsPressed() && currentLineCD + .5f < Time.time) )
+                        {
+                            yield return new WaitForSeconds(.05f);
+                        }
+                        currentLineCD = Time.time;
+                        timeForCurrentLine = currentStoryLines[i].getTimeToRead();
+                    }
+                    else
+                    {
+                        timeForCurrentLine += .1f;
+                    }
+                
                 }
             }
 

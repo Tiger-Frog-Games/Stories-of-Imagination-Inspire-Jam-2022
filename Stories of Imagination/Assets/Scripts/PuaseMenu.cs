@@ -136,6 +136,11 @@ namespace StoriesofImagination
             SceneManager.LoadScene("MainMenu");
         }
 
+        public void ToggleClickText( bool newValue)
+        {
+            GameStateManager.Instance.SetSubtitleClickForNext(newValue);
+        }
+
         #endregion
     }
 }

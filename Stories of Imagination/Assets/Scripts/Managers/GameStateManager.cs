@@ -35,6 +35,7 @@ namespace StoriesofImagination
         #region Variables
 
         public GameState CurrentGameState { get; private set; }
+        public bool isSubtitlesClickForNext { get; private set; }
 
         public delegate void GameStateChangeHandler(GameState newGameState);
         public event GameStateChangeHandler OnGameStateChanged;
@@ -53,6 +54,16 @@ namespace StoriesofImagination
 
             CurrentGameState = newGameState;
             OnGameStateChanged?.Invoke(newGameState);
+        }
+
+        public void SetSubtitleClickForNext( bool boolIn)
+        {
+            if (boolIn == isSubtitlesClickForNext)
+            {
+                return;
+            }
+
+            isSubtitlesClickForNext = boolIn;
         }
 
         #endregion
