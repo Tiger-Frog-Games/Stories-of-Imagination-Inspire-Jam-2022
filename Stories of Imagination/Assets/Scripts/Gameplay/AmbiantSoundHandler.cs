@@ -17,6 +17,8 @@ namespace StoriesofImagination
         [SerializeField] private AudioSource outsideOne;
         [SerializeField] private AudioSource outsideTwo;
 
+        [SerializeField] private EventChannelSO OnGameEnding;
+
         #endregion
 
         #region Unity Methods
@@ -26,11 +28,15 @@ namespace StoriesofImagination
             GameStateManager.Instance.OnGameStateChanged += GameStateManager_OnGameStateChanged;
 
             ambientSound_Coroutine = new Dictionary<AudioSource, IEnumerator>();
+
+            OnGameEnding.OnEvent += OnGameEnding_OnEvent;
         }
 
         private void OnDestroy()
         {
             GameStateManager.Instance.OnGameStateChanged -= GameStateManager_OnGameStateChanged;
+
+            OnGameEnding.OnEvent -= OnGameEnding_OnEvent;
         }
 
         public void addSound(AudioSource audioIn)
@@ -236,6 +242,22 @@ namespace StoriesofImagination
             addOutSideSound(outsideTwo);
             
             didLisenToOutsideStory = true;
+        }
+
+        private void OnGameEnding_OnEvent()
+        {
+
+
+            foreach (AudioSource source in outsideAmbientSounds)
+            {
+                source.volume = 0;
+            }
+
+            foreach (AudioSource source in insideAmbientSounds)
+            {
+                source.volume = 0;
+                
+            }
         }
 
         #endregion

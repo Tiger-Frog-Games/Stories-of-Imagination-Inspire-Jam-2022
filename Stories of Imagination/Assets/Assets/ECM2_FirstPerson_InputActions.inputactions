@@ -33,24 +33,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Cursor Lock",
-                    "type": "Button",
-                    "id": "ebac10f6-fa6e-45fc-a11d-a47eca9a2b97",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Cursor Unlock",
-                    "type": "Button",
-                    "id": "12a1d28f-aeba-4eed-963a-db43508fafef",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "InteractWithObject",
                     "type": "Button",
                     "id": "79dc49af-b5bf-4293-b7b9-3c7db6d03c79",
@@ -146,28 +128,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Mouse Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "632f388c-d728-42c3-87d5-9fb8d08e6c64",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard And Mouse",
-                    "action": "Cursor Lock",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "31e6e5cd-89c8-4485-83ea-4affa494487f",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard And Mouse",
-                    "action": "Cursor Unlock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

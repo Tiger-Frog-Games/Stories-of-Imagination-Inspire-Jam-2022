@@ -54,7 +54,7 @@ namespace StoriesofImagination
 
         private void interactButtonPress(InputAction.CallbackContext obj)
         {
-            if ( currentHoveredInteract != null )
+            if ( currentHoveredInteract != null && GameStateManager.Instance.CurrentGameState == GameState.Gameplay )
             {
 
                 currentHoveredInteract.Interact();
@@ -91,7 +91,7 @@ namespace StoriesofImagination
 
             foreach (Interactable interact in detectedObject.GetComponentsInChildren<Interactable>())
             {
-                if (interact != currentHoveredInteract)
+                if (interact == currentHoveredInteract)
                 {
                     OnHoverLost.RaiseEvent(currentHoveredInteract);
 

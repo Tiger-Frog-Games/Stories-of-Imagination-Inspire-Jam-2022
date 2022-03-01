@@ -19,6 +19,11 @@ namespace StoriesofImagination
             {
                 SceneManager.LoadScene("UI Scene", LoadSceneMode.Additive);
             }
+
+            if (SceneManager.GetSceneByName("Terrain").isLoaded == false)
+            {
+                SceneManager.LoadScene("Terrain", LoadSceneMode.Additive);
+            }
         }
 
     }
