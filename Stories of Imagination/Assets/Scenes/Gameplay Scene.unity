@@ -2030,7 +2030,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 18.279934, z: 7.885664}
+  m_Size: {x: 1, y: 18.279934, z: 7.885664}
   m_Center: {x: -0.23124999, y: -9.139961, z: -3.942793}
 --- !u!23 &747564448
 MeshRenderer:
@@ -6011,7 +6011,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 18.82, z: 7.885664}
+  m_Size: {x: 1, y: 18.82, z: 7.885664}
   m_Center: {x: -0.23124999, y: -9.139961, z: -3.942793}
 --- !u!1 &1778965173
 GameObject:
@@ -8803,7 +8803,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -18253,7 +18253,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 18.279934, z: 7.885664}
+  m_Size: {x: 1, y: 18.279934, z: 7.885664}
   m_Center: {x: -0.23124999, y: -9.139961, z: -3.942793}
 --- !u!95 &7950814341042691251
 Animator:
