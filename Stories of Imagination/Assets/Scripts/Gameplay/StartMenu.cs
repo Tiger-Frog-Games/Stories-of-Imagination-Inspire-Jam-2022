@@ -50,6 +50,11 @@ namespace StoriesofImagination
             Credits.SetActive(false);
         }
 
+        public void exitGame()
+        {
+            Application.Quit();
+        }
+
         #endregion
     }
 }

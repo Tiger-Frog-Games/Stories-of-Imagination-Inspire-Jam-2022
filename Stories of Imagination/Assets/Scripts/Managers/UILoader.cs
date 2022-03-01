@@ -8,9 +8,18 @@ namespace StoriesofImagination
     public class UILoader : MonoBehaviour
     {
         // Start is called before the first frame update
+        [SerializeField] private bool loadUi, LoadTerrain;
+
         void Start()
         {
-            checkIfUISceneIsLoaded();
+            if (loadUi == true)
+            {
+                checkIfUISceneIsLoaded();
+            }
+            if (LoadTerrain == true)
+            {
+                checkIfTerrainSceneIsLoaded();
+            }
         }
 
         private void checkIfUISceneIsLoaded()
@@ -19,7 +28,10 @@ namespace StoriesofImagination
             {
                 SceneManager.LoadScene("UI Scene", LoadSceneMode.Additive);
             }
+        }
 
+        private void checkIfTerrainSceneIsLoaded()
+        {
             if (SceneManager.GetSceneByName("Terrain").isLoaded == false)
             {
                 SceneManager.LoadScene("Terrain", LoadSceneMode.Additive);

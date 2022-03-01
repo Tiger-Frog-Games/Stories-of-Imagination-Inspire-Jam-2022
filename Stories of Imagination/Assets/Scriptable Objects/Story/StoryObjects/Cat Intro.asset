@@ -34,7 +34,7 @@ MonoBehaviour:
     timeToRead: 4
   - lineReader: 2
     line: "No, that\u2019s not stealing.  That\u2019s not how stories work.  Stories
-      only work when you share the.  It\u2019s not that deep, kid."
+      only work when you share them.  It\u2019s not that deep, kid."
     timeToRead: 4
   - lineReader: 2
     line: "That goofy mutt in the front yard\u2019s got a story about an acorn or

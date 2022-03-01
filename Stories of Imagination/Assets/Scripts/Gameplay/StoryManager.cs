@@ -103,7 +103,7 @@ namespace StoriesofImagination
 
                     if ((GameStateManager.Instance.isSubtitlesClickForNext == true))
                     {
-                        while ( ! (interactInputAction.IsPressed() && currentLineCD + .5f < Time.time) )
+                        while ( ! (interactInputAction.IsPressed() && currentLineCD + 2f < Time.time) )
                         {
                             yield return new WaitForSeconds(.05f);
                         }
