@@ -140,6 +140,17 @@
                 },
                 {
                     "name": "",
+                    "id": "525f1d98-f9be-47ff-8793-c1a42495f47d",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Mouse Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "632f388c-d728-42c3-87d5-9fb8d08e6c64",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -178,6 +189,28 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard And Mouse",
+                    "action": "InteractWithObject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42455da8-d336-4499-8144-a58589dd2ea5",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard And Mouse",
+                    "action": "InteractWithObject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "469e83da-2189-4a30-8607-731188471271",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "InteractWithObject",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -734,6 +767,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard And Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "950ea344-c2d3-4ff5-a458-2109fa815a12",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b4fba79d-2022-4b4e-b6ab-bd82ea8beded",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false

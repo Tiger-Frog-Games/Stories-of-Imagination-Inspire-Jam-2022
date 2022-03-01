@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyLines:
   - lineReader: 0
-    line: 'Narration: It is a warm afternoon in late May, '
+    line: 'It is a warm afternoon in late May, '
     timeToRead: 4
   - lineReader: 0
     line: "The sun is high in the sky and a cool breeze dances its way through windows

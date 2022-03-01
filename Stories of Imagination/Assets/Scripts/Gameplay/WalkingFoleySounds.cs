@@ -55,7 +55,7 @@ namespace StoriesofImagination
 
         private void Update()
         {
-            if (lastFootStepCD + lastFootStep < Time.time && cm.velocity.magnitude > 0 && footAudioSource.isPlaying == false)
+            if (lastFootStepCD + lastFootStep < Time.time && cm.velocity.magnitude > .1 && footAudioSource.isPlaying == false)
             {
                 lastFootStep = Time.time;
                 playFootSound();

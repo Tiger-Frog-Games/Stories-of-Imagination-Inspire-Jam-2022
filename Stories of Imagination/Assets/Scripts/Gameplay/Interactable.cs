@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace StoriesofImagination
 {
@@ -18,6 +19,9 @@ namespace StoriesofImagination
 
         [SerializeField] private EventChannelSO OnInteractEvent;
         [SerializeField] private EventChannelSO OnDeInteractEvent;
+
+        [SerializeField] private UnityEvent OnActive;
+        [SerializeField] private UnityEvent DeActive;
 
         private bool isActiveInActiveState = false;
 
@@ -74,6 +78,7 @@ namespace StoriesofImagination
             {
                 OnInteractEvent.RaiseEvent();
             }
+            OnActive.Invoke();
         }
 
         protected virtual void DeActiveInteract()
@@ -82,6 +87,7 @@ namespace StoriesofImagination
             {
                 OnDeInteractEvent.RaiseEvent();
             }
+            DeActive.Invoke();
         }
 
         #endregion

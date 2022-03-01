@@ -16,7 +16,7 @@ MonoBehaviour:
   - lineReader: 0
     line: "In the middle of the yard you spot your neighbor\u2019s dog.  It is big
       and fluffy, with rich brown fur, and its tongue always hangs from one side
-      of its mouth excitedly. Dog: Hello friend!  Do you want to play!?"
+      of its mouth excitedly."
     timeToRead: 4
   - lineReader: 3
     line: Hello friend!  Do you want to play!?

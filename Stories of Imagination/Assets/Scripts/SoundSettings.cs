@@ -11,6 +11,8 @@ namespace StoriesofImagination
     {
         #region Variables
 
+        [SerializeField] private float minSound, MaxSound;
+
         [SerializeField] private AudioMixer theMixer;
 
         [SerializeField] private TMP_Text mastLabel, musicLabel, sfxLabel;
@@ -40,6 +42,7 @@ namespace StoriesofImagination
 
             float vol = 0f;
             
+
             theMixer.GetFloat("MasterVol", out vol);
             mastSlider.value = vol;
             
@@ -49,9 +52,9 @@ namespace StoriesofImagination
             theMixer.GetFloat("SFXVol", out vol);
             sfxSlider.value = vol;
 
-            mastLabel.text = Mathf.RoundToInt(mastSlider.value + 80).ToString();
-            musicLabel.text = Mathf.RoundToInt(musicSlider.value + 80).ToString();
-            sfxLabel.text = Mathf.RoundToInt(sfxSlider.value + 80).ToString();
+            mastLabel.text = Mathf.RoundToInt(normalizeFloat(mastSlider.value)).ToString();
+            musicLabel.text = Mathf.RoundToInt(normalizeFloat(musicSlider.value)).ToString();
+            sfxLabel.text = Mathf.RoundToInt(normalizeFloat(sfxSlider.value)).ToString();
         }
 
         #endregion
@@ -60,7 +63,7 @@ namespace StoriesofImagination
 
         public void SetMasterVol()
         {
-            mastLabel.text = Mathf.RoundToInt(mastSlider.value + 80).ToString();
+            mastLabel.text = Mathf.RoundToInt(normalizeFloat(mastSlider.value)).ToString();
 
             theMixer.SetFloat("MasterVol", mastSlider.value);
 
@@ -69,7 +72,7 @@ namespace StoriesofImagination
 
         public void SetMusicVol()
         {
-            musicLabel.text = Mathf.RoundToInt(musicSlider.value + 80).ToString();
+            musicLabel.text = Mathf.RoundToInt(normalizeFloat(musicSlider.value)).ToString();
 
             theMixer.SetFloat("MusicVol", musicSlider.value);
 
@@ -78,11 +81,16 @@ namespace StoriesofImagination
 
         public void SetSFXVol()
         {
-            sfxLabel.text = Mathf.RoundToInt(sfxSlider.value + 80).ToString();
+            sfxLabel.text = Mathf.RoundToInt(normalizeFloat(sfxSlider.value )).ToString();
 
             theMixer.SetFloat("SFXVol", sfxSlider.value);
 
             PlayerPrefs.SetFloat("SFXVol", sfxSlider.value);
+        }
+
+        private float normalizeFloat(float floatIn)
+        {
+            return ( ((floatIn - minSound) / ( MaxSound - minSound )) * 100 );
         }
 
         #endregion

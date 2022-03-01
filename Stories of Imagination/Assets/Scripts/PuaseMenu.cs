@@ -10,9 +10,12 @@ namespace StoriesofImagination
     {
         #region Variables
 
+        [SerializeField] private EventChannelSO OnGameEnding;
+
         [SerializeField] private GameObject SettingsPanel;
         [SerializeField] private GameObject ScreenGrayer;
         [SerializeField] private GameObject PauseMenu;
+        [SerializeField] private GameObject endScene;
 
         [SerializeField] private InputActionAsset actions;
         private InputAction openMenuButton;
@@ -30,6 +33,8 @@ namespace StoriesofImagination
             }
             openMenuButton?.Enable();
 
+            OnGameEnding.OnEvent += ShowEndScreen;
+
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
@@ -40,6 +45,7 @@ namespace StoriesofImagination
             {
                 openMenuButton.performed -= OnOpenMenuButtonPress;
             }
+            OnGameEnding.OnEvent -= ShowEndScreen;
         }
 
         #endregion
@@ -53,7 +59,14 @@ namespace StoriesofImagination
 
         public void OnPauseButtonPressed()
         {
+            
+            if (endScene.activeInHierarchy == true || string.Equals( SceneManager.GetActiveScene().name.ToString(), "MainMenu") )
+            {
+                return;
+            }
+            
             // In Game
+
 
             if (GameStateManager.Instance.CurrentGameState == GameState.Gameplay)
             {
@@ -108,10 +121,21 @@ namespace StoriesofImagination
             PauseMenu.SetActive(true);
         }
 
+        private void ShowEndScreen()
+        {
+            GameStateManager.Instance.SetState(GameState.Paused);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            endScene.SetActive(true);
+        }
+
         public void GameExit()
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene("MainMenu");
         }
+
         #endregion
     }
 }

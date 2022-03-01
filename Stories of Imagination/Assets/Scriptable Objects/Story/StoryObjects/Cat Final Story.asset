@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c999d9be8b683b4eafd1caf7effe9b2, type: 3}
+  m_Name: Cat Final Story
+  m_EditorClassIdentifier: 
+  storyLines:
+  - lineReader: 2
+    line: You got em?
+    timeToRead: 4
+  - lineReader: 2
+    line: Excellent kid, never doubted you for a second!
+    timeToRead: 4
+  - lineReader: 2
+    line: "How was it?  What\u2019d you learn?"
+    timeToRead: 4
+  - lineReader: 2
+    line: "Actually, never mind, don\u2019t keep your grandma waiting any longer
+      than she needs to. "
+    timeToRead: 4

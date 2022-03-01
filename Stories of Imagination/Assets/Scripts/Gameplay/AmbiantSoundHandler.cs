@@ -48,7 +48,10 @@ namespace StoriesofImagination
         public void addOutSideSound(AudioSource audioIn)
         {
             outsideAmbientSounds.Add(audioIn);
-            StartCoroutine(audioFadeIn(audioIn));
+            if(isOutside == true)
+            {
+                addSound(audioIn);
+            }
         }
 
         public void removeOutsideSound(AudioSource audioIn)
@@ -107,10 +110,17 @@ namespace StoriesofImagination
             this.enabled = (newGameState == GameState.Gameplay) ;
         }
 
+        private bool isOutside = true;
         private Dictionary<AudioSource, IEnumerator> ambientSound_Coroutine;
         public void goOutside()
         {
-            foreach(AudioSource source in outsideAmbientSounds)
+            isOutside = true;
+            if (isPlayingSoloBranch == true)
+            {
+                return;
+            }
+
+            foreach (AudioSource source in outsideAmbientSounds)
             {
                 if (ambientSound_Coroutine.TryGetValue(source, out IEnumerator source_coroutine))
                 {
@@ -142,6 +152,12 @@ namespace StoriesofImagination
 
         public void goInside()
         {
+            isOutside = false;
+            if (isPlayingSoloBranch == true)
+            {
+                return;
+            }
+
             foreach (AudioSource source in insideAmbientSounds)
             {
                 if (ambientSound_Coroutine.TryGetValue(source, out IEnumerator source_coroutine))
@@ -171,8 +187,10 @@ namespace StoriesofImagination
             }
         }
 
+        private bool isPlayingSoloBranch = false;
         public void playBranchMelodySolo(AudioSource soloMelody)
         {
+            isPlayingSoloBranch = true;
             foreach (AudioSource source in outsideAmbientSounds)
             {
                 if (ambientSound_Coroutine.TryGetValue(source, out IEnumerator source_coroutine))
@@ -191,20 +209,16 @@ namespace StoriesofImagination
 
         public void donePlayingSoloBranch(AudioSource soloMelody)
         {
-            foreach (AudioSource source in outsideAmbientSounds)
+            isPlayingSoloBranch = false;
+            if (isOutside)
             {
-                if (ambientSound_Coroutine.TryGetValue(source, out IEnumerator source_coroutine))
-                {
-                    if (source_coroutine != null)
-                    {
-                        StopCoroutine(source_coroutine);
-                    }
-                    ambientSound_Coroutine.Remove(source);
-                }
-
-                ambientSound_Coroutine.Add(source, audioFadeIn(source));
-                StartCoroutine(ambientSound_Coroutine[source]);
+                goOutside();
             }
+            else
+            {
+                goInside();
+            }
+            
             removeSound(soloMelody);
         }
 

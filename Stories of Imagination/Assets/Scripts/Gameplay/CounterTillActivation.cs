@@ -72,7 +72,7 @@ namespace StoriesofImagination
                         }
                     }
 
-                    lineSender.changeLine($"You still have to lisen to {outMsg}");
+                    lineSender.changeLine($"You still have to listen to {outMsg}");
                 }
             }
 

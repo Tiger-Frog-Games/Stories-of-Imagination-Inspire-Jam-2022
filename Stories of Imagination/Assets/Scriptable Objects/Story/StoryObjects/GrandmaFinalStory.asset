@@ -14,8 +14,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyLines:
   - lineReader: 1
-    line: Grandma's final lines
+    line: ' Hello, honey!'
     timeToRead: 4
   - lineReader: 1
-    line: Game over!
+    line: What brings you back to see your old grandma?
+    timeToRead: 4
+  - lineReader: 1
+    line: "\u2026"
+    timeToRead: 4
+  - lineReader: 1
+    line: "You\u2019ve found a story?  Oh I\u2019d love to hear one."
+    timeToRead: 4
+  - lineReader: 0
+    line: "You sit next to your grandmother\u2019s bed and\u2014with the light warming
+      your face and the birds singing in your ears\u2014you tell her what you\u2019ve
+      heard."
+    timeToRead: 4
+  - lineReader: 0
+    line: You tell her about the rock, with its long friendship with the ocean and
+      its lesson that things will keep going.
+    timeToRead: 4
+  - lineReader: 0
+    line: "You tell her about the dog, and its old friends and new friends and how
+      happiness isn\u2019t just tied down to one place or person."
+    timeToRead: 4
+  - lineReader: 0
+    line: "You tell her about the tree, with its tale told from a friend of a friend
+      about two people you\u2019ve never met, and how their lives are just as happy
+      and sad as everyone else\u2019s."
+    timeToRead: 4
+  - lineReader: 0
+    line: "After you\u2019re done, grandma takes a deep breath and stares out the
+      window.  She has a smile on her face that makes you feel comfortable."
+    timeToRead: 4
+  - lineReader: 1
+    line: Those were absolutely lovely, honey.
+    timeToRead: 4
+  - lineReader: 1
+    line: I am so glad you shared them with me.
+    timeToRead: 4
+  - lineReader: 1
+    line: "Now, it\u2019s only good manners when you\u2019re given something to pay
+      it back, so sight tight just there and grandma will tell you a story of her
+      own."
     timeToRead: 4

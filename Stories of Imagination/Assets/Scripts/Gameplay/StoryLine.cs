@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace StoriesofImagination
 {
-    public enum LINEREADERS {Narrirator, Grandma, Cat, Dog, Tree, Rock }
+    public enum LINEREADERS { Narrator, Grandma, Cat, Dog, Tree, Rock }
 
     [System.Serializable]
     public class StoryLine

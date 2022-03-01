@@ -23,9 +23,9 @@ namespace StoriesofImagination
 
         }
 
-        private void OnDestroy()
+        protected override void OnOnDestroy()
         {
-            
+            base.OnOnDestroy();
             GameStateManager.Instance.OnGameStateChanged -= GameStateManager_OnGameStateChanged;
         }
 

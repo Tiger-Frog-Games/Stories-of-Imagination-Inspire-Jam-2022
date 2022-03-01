@@ -10,6 +10,8 @@ namespace StoriesofImagination
         #region Variables
         [SerializeField] private CharacterMovement cm;
 
+        [SerializeField] private EventChannelSOBool toggleHeadBob;
+
         [SerializeField] private float headBobRate;
         [SerializeField] private float headBobDistance;
 
@@ -23,6 +25,7 @@ namespace StoriesofImagination
         {
             
             GameStateManager.Instance.OnGameStateChanged += GameStateManager_OnGameStateChanged;
+            toggleHeadBob.OnEvent += ToggleHeadBob_OnEvent;
 
         }
 
@@ -30,6 +33,8 @@ namespace StoriesofImagination
         {
 
             GameStateManager.Instance.OnGameStateChanged -= GameStateManager_OnGameStateChanged;
+
+            toggleHeadBob.OnEvent -= ToggleHeadBob_OnEvent;
         }
 
         #endregion
@@ -71,11 +76,14 @@ namespace StoriesofImagination
         Vector3 helper;
         private void UpdateHeadPosition()
         {
-            
-
             //Vector3 target;
 
             this.transform.localPosition = Vector3.Lerp(this.transform.localPosition, helper, Time.deltaTime) ;
+        }
+
+        private void ToggleHeadBob_OnEvent(bool obj)
+        {
+            enabled = obj;
         }
 
         #endregion
